@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">High on Textbox</string>
+    <string name="message">Message</string>
+    <string name="clear">Clear</string>
+</resources>
