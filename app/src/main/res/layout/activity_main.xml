@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,26 +12,25 @@
         android:inputType="textMultiLine"
         android:lines="10"
         android:hint="@string/message"
-        android:gravity="top|left"
         android:id="@+id/etMessage"
-
+        android:layout_alignParentTop="true"
         />
+
     <Button
+        android:id="@+id/btSend"
         android:layout_width="match_parent"
         android:layout_height="@dimen/sendBtnHeight"
-
-        android:id="@+id/btSend"
-        app:layout_constraintTop_toBottomOf="@id/etMessage"
-        android:onClick="onSendClick"
+        android:layout_below="@id/etMessage"
         android:background="@drawable/sendbutton"
-        />
+        android:onClick="onSendClick" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/clear"
         android:id="@+id/btClear"
-        app:layout_constraintTop_toBottomOf="@id/btSend"
+        android:layout_below="@id/btSend"
         android:onClick="onClearClick"
         />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
